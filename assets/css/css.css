@@ -1,0 +1,186 @@
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+    }
+    #menu.active {
+        display: flex;
+    }
+}
+
+body {
+    background: url('images/low-poly-grid-haikei.png') no-repeat center center fixed;
+    background-size: cover;
+}
+button, a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, a:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.contact-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/workspace.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.contact-page::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* برای تاریک‌تر کردن پس‌زمینه */
+    backdrop-filter: blur(5px); /* برای محو کردن تصویر پس‌زمینه */
+    z-index: 1;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/workspace2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.about-page::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* برای تاریک‌تر کردن پس‌زمینه */
+    backdrop-filter: blur(5px); /* برای محو کردن تصویر پس‌زمینه */
+    z-index: 1;
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/workspace2.jpg') no-repeat center center/cover;
+    padding: 20px;
+    color: white;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+}
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+.portfolio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.portfolio-content {
+    padding: 15px;
+    text-align: center;
+    color: black;
+}
+.portfolio-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+.portfolio-content p {
+    margin-top: 10px;
+    color: #555;
+}
+.portfolio-content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.portfolio-content a:hover {
+    background: #0056b3;
+}
+
+.cartoon-button {
+    border: 4px solid black;
+    background-color: yellow;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 4px 4px 0 black;
+    transition: all 0.2s;
+}
+.cartoon-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 black;
+}
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

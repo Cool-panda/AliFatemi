@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره من</title>
+    <link rel="icon" type="image/png" href="assets/css/images/af1.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="assets/css/css.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <header class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/css/images/af1.png" alt="لوگو" class="h-10 w-auto mr-2">
+                <h1 class="text-xl font-bold">Ali Fatemi</h1>
+            </div> <!-- این div بسته نشده بود، الان درسته -->
+    
+            <!-- دکمه باز کردن منو در موبایل -->
+            <button id="menu-btn" class="md:hidden bg-gray-200 p-2 rounded">
+                ☰
+            </button>
+    
+            <!-- منوی ناوبری -->
+            <nav>
+                <ul id="menu" class="hidden md:flex flex-col md:flex-row absolute md:static bg-white md:bg-transparent w-full md:w-auto left-0 top-16 md:top-auto shadow-md md:shadow-none p-4 md:p-0">
+                    <li><a href="index.html" class="block p-2 hover:text-blue-500">صفحه اصلی</a></li>
+                    <li><a href="portfolio.html" class="block p-2 hover:text-blue-500">نمونه‌کارها</a></li>
+                    <li><a href="contact.html" class="block p-2 hover:text-blue-500">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="about-page">
+        <div class="about-content p-6">
+            <h1 class="text-3xl font-bold">درباره من</h1>
+            <p class="mt-4 text-lg">سلام! من علی فاطمی هستم، یک طراح وب و توسعه‌دهنده که عاشق خلق پروژه‌های خلاقانه و کاربردی هستم.</p>
+            <p class="mt-2">هدف من ایجاد وب‌سایت‌هایی است که تجربه کاربری عالی و طراحی زیبا داشته باشند.</p>
+            <p class="mt-2">اگر قصد سفارش سایت دارید در بخش تماس با من , با بنده در ارتباط باشید</p>
+            
+        </div>
+    </div>
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector("#menu-btn");
+    const menu = document.querySelector("#menu");
+
+    menuButton.addEventListener("click", function () {
+        menu.classList.toggle("hidden"); 
+    });
+
+   
+
+   
+    setTimeout(() => {
+                document.getElementById("preloader").style.display = "none";
+            }, 1500);
+        });
+   </script>
+</body>
+</html>

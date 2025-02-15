@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Fatemi</title>
+    <link rel="icon" type="image/png" href="assets/css/images/af1.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/css.css">
+  
+</div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('section', { delay: 200, distance: '50px', origin: 'bottom', duration: 1000 });
+        
+    </script>
+    
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <header class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/css/images/af1.png" alt="لوگو" class="h-10 w-auto mr-2">
+                <h1 class="text-xl font-bold">Ali Fatemi</h1>
+            </div> <!-- این div بسته نشده بود، الان درسته -->
+    
+            <!-- دکمه باز کردن منو در موبایل -->
+            <button id="menu-btn" class="md:hidden bg-gray-200 p-2 rounded">
+                ☰
+            </button>
+    
+            <!-- منوی ناوبری -->
+            <nav>
+                <ul id="menu" class="hidden md:flex flex-col md:flex-row absolute md:static bg-white md:bg-transparent w-full md:w-auto left-0 top-16 md:top-auto shadow-md md:shadow-none p-4 md:p-0">
+                    <li><a href="about.html" class="block p-2 hover:text-blue-500">درباره من</a></li>
+                    <li><a href="portfolio.html" class="block p-2 hover:text-blue-500">نمونه‌کارها</a></li>
+                    <li><a href="contact.html" class="block p-2 hover:text-blue-500">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+    
+    <main class="container mx-auto mt-10 p-4 text-center">
+        <section>
+        <h2 class="text-3xl font-semibold">سلام! من علی فاطمی هستم</h2>
+        <p class="mt-4 text-lg">اینجا می‌تونید درباره‌ی من و کارهام بیشتر بدونید.</p>
+        <div class="mt-6">
+            <a href="contact.html" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">تماس با من</a>
+        </section>
+        </div>
+        
+       
+        
+      
+        <section class="mt-10 flex justify-center space-x-10 text-center">
+            <div>
+                <h3 class="text-3xl font-bold text-blue-500">10+</h3>
+                <p class="text-gray-700">پروژه موفق</p>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold text-green-500">5+</h3>
+                <p class="text-gray-700">سال تجربه</p>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold text-yellow-500">21+</h3>
+                <p class="text-gray-700">مشتری راضی</p>
+            </div>
+        </section>
+
+        <section class="mt-10 text-center">
+            <h2 class="text-2xl font-bold">مهارت‌های من</h2>
+            <div class="w-3/4 mx-auto mt-4 text-left">
+                <p class="font-semibold">HTML & CSS</p>
+                <div class="w-full bg-gray-300 rounded-full h-4">
+                    <div class="bg-blue-500 h-4 rounded-full w-9/12"></div>
+                </div>
+        
+                <p class="font-semibold mt-2">JavaScript</p>
+                <div class="w-full bg-gray-300 rounded-full h-4">
+                    <div class="bg-yellow-500 h-4 rounded-full w-7/12"></div>
+                </div>
+        
+                <p class="font-semibold mt-2">WordPress</p>
+                <div class="w-full bg-gray-300 rounded-full h-4">
+                    <div class="bg-green-500 h-4 rounded-full w-8/12"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-10 text-center bg-gray-200 p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-semibold">✨ نقل‌قول مورد علاقه‌ی من:</h2>
+            <p class="mt-4 italic text-gray-700">"هر روز یک قدم جلوتر از دیروز باش!"</p>
+        </section>
+
+        
+        
+        
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+    gsap.from("section", { 
+        x: 200,  /* از 200px سمت راست بیاد */
+        opacity: 0, 
+        duration: 1, 
+        ease: "power3.out",
+        stagger: 1 /* اختلاف زمانی بین هر بخش 1 ثانیه */
+    });
+    
+   
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector("#menu-btn");
+    const menu = document.querySelector("#menu");
+
+    menuButton.addEventListener("click", function () {
+        menu.classList.toggle("hidden"); 
+    });
+
+   
+
+   
+    setTimeout(() => {
+                document.getElementById("preloader").style.display = "none";
+            }, 1500);
+        });
+
+
+
+</script>
+
+
+</body>
+</html>
